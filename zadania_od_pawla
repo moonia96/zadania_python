@@ -1,0 +1,30 @@
+'''
+1. Wyciągnij tytuł z linków dla TVP_VOD
+IN: https://vod.tvp.pl/website/the-voice-of-poland,21503248
+OUT: The Voice Of Poland
+'''
+
+a = 'https://vod.tvp.pl/website/the-voice-of-poland,21503248'
+b = 'https://vod.tvp.pl/website/w-ulamku-sekundy,56010995'
+
+
+'''
+
+
+a = 'https://vod.tvp.pl/website/the-voice-of-poland,21503248'
+b = 'https://vod.tvp.pl/website/w-ulamku-sekundy,56010995'
+
+begin = (a.find('e/')) + 2
+end = (a.find(','))
+title_with = (a[begin : end])
+titleA = title_with.replace('-', ' ')
+right_title = titleA.title()
+print(right_title)
+
+beginB = (b.find('e/')) + 2
+endB = (b.find(','))
+titleB_with = (b[beginB : endB])
+titleB = titleB_with.replace('-', ' ')
+right_titleB = titleB.title()
+
+print(right_titleB)
